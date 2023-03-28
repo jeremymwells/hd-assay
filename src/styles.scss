@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: starwars;
+  src: url('assets/fonts/star_jedi/starjedi/Starjedi.ttf');
+}
+
+@font-face {
+  font-family: starwars-hollow;
+  src: url('assets/fonts/star_jedi/starjedi/Starjhol.ttf');
+}
+
+html, body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background-image: url('assets/img/bg.jpg');
+}
+
+.body-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}

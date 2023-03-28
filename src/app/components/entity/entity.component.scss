@@ -1,0 +1,99 @@
+h1 {
+  display: inline-block;
+  font-family: 'starwars';
+  font-size: 5em;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: -.25em 0 0 0;
+  color: lighten(#dede04, 10%);
+  a {
+    float: left;
+    text-decoration: none;
+    color: darken(#dede04, 20%);
+    text-transform: uppercase;
+    div {
+      font-family: verdana;
+      font-size: 10px;
+      margin-top: -2em;
+      display: none;
+    }
+
+    &:hover {
+      color: lighten(#dede04, 10%);
+      div {
+        display: block;
+      }
+    }
+
+  }
+}
+
+.main-content {
+  position: absolute;
+  left: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.entity-image {
+  position: relative;
+  width: 30%;
+  text-align: center;
+  img {
+    height: 100%;
+  }
+}
+
+.main-well {
+  position: relative;
+  top: 0;
+  left: 1em;
+  gap: 10px;
+  width: 65%;
+  height: calc(90vh - 3em);
+  overflow-y: scroll;
+}
+
+.description {
+  margin: 0 1em 2em -1em;
+  padding: 1em 0 1em 2em;
+  display: block;
+  background-color: white;
+  min-height: 5em;
+
+  .upper-right {
+    width: 100%;
+    position: relative;
+    top:0 ;
+    right: 1em;
+    text-align: right;
+    h3 {
+      margin: -0.25em 0 -0.75em 0;
+      font-size: 5em;
+      div {
+        font-family: verdana;
+        font-size: 10px;
+        margin-top: -1.75em;
+        // display: none;
+        display: block;
+      }
+    
+    }
+  }
+
+  .key {
+    font-family: 'starwars';
+    width: calc(100% - 1em);
+    .value {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-transform:uppercase;
+    }
+  }
+}
+

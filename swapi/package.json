@@ -1,0 +1,17 @@
+{
+  "name": "hd-assay-swapi",
+  "version": "0.0.1",
+  "scripts": {
+    "gen": "ts-node --esm ./generator.ts",
+    "server": "nodemon ./server.ts"
+  },
+  "private": true,
+  "dependencies": {
+    "@types/node": "^18.15.7",
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1"
+  }
+}

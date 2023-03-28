@@ -1,0 +1,18 @@
+<h1>
+  <a [routerLink]="['/home']">
+    <i class="ai-arrow-left"></i>
+    <div>GO HOME</div>
+  </a>
+  {{category}}
+</h1>
+<div class="main-container" *ngIf="category">
+  <div class="main-content">
+    <div class="entity" *ngFor="let entity of entities">
+      <a [routerLink]="url(entity.url)">
+        <div class="entity-label-background">&nbsp;</div>
+        <h2 class="entity-label">{{(entity.title || entity.name).toLowerCase()}}</h2>
+        <img src="{{src(entity)}}" (error)="src({},$event)" />
+      </a>
+    </div>
+  </div>
+</div>

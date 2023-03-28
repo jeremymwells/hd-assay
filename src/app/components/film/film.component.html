@@ -1,0 +1,88 @@
+<h1>
+  <a [routerLink]="['/films']">
+    <i class="ai-arrow-left"></i>
+    <div>films</div>
+  </a>
+  {{film.title || ''}}
+</h1>
+<div class="main-content" *ngIf="film">
+  <div class="entity-image">
+    <img src="{{ src(film) }}" (error)="src(film,$event)"  />
+  </div>
+  <div class="main-well">
+
+    <div class="description">
+      <div class="title">
+        <h2 class="shortened">
+         About
+        </h2>
+        <div class="episode">
+          {{ film.episode_id }}
+          <div>episode</div>
+        </div>
+      </div>
+      <div class="body-block">
+        <div class="key">
+          director: <span class="value">{{ film.director }}</span>
+        </div>
+        <div class="key">
+          date created: <span class="value">{{ film.created }}</span>
+        </div>
+        <div class="key">
+          producer(s): <span class="value">{{ film.producer }}</span>
+        </div>
+        <div class="key">
+          opening crawl: <span class="value">{{ film.opening_crawl }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <div class="title">
+        <h2>
+         Related Characters
+        </h2>
+        <div class="body">
+          <div class="scroll">
+            <a [routerLink]="[url(personUrl)]" class="card" *ngFor="let personUrl of film.characters">
+              <img src="{{ src({ url: personUrl }) }}" (error)="src({ url: personUrl }, $event)" />
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <div class="title">
+        <h2>
+         Related Planets
+        </h2>
+        <div class="body">
+          <div class="scroll">
+            <a [routerLink]="[url(planetUrl)]" class="card" *ngFor="let planetUrl of film.planets">
+              <img src="{{ src({ url: planetUrl }) }}" (error)="src({ url: planetUrl }, $event)" />
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <div class="title">
+        <h2>
+         Related Vehicles
+        </h2>
+        <div class="body">
+          <div class="scroll">
+            <a [routerLink]="[url(vehicleUrl)]" class="card" *ngFor="let vehicleUrl of film.vehicles">
+              <img src="{{ src({ url: vehicleUrl }) }}" (error)="src({ url: vehicleUrl }, $event)" />
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

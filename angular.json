@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "hd",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -68,7 +68,8 @@
               "browserTarget": "hd-assay:build:production"
             },
             "development": {
-              "browserTarget": "hd-assay:build:development"
+              "browserTarget": "hd-assay:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
